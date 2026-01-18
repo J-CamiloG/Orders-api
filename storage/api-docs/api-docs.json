@@ -16,7 +16,7 @@
       "post": {
         "tags": ["Orders"],
         "summary": "Importar órdenes desde archivo CSV o JSON",
-        "description": "Permite subiir un archivo CSV o JSON con múltiples órdenes para procesarlas de forma asíncrona",
+        "description": "Permite subir un archivo CSV o JSON con múltiples órdenes para procesarlas de forma asíncrona",
         "operationId": "importOrders",
         "requestBody": {
           "required": true,

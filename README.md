@@ -7,53 +7,59 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Laravel API – Gestión de Órdenes
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+El objetivo de esta API es gestionar órdenes de manera eficiente y escalable.  
+Permite:
+- Procesamiento masivo de órdenes desde archivos CSV o JSON.
+- Validación de datos y persistencia en PostgreSQL.
+- Procesamiento asíncrono mediante Jobs y colas.
+- Comunicación con un servicio externo NestJS para procesamiento especializado.
+- Cacheo de listados y estados de órdenes usando Redis.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Tecnologías principales
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<details>
+<summary>Laravel 12</summary>
 
-## Learning Laravel
+- Framework PHP utilizado como **API principal y orquestador**.
+- Maneja las rutas, controllers, services y repositories.
+- Facilita la integración con Jobs y colas para procesamiento asíncrono.
+- [Documentación oficial Laravel](https://laravel.com)
+</details>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+<details>
+<summary>PostgreSQL</summary>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Base de datos relacional utilizada para **persistencia de órdenes**.
+- Soporta transacciones, índices y relaciones entre tablas.
+- Optimizada para consultas de listados y detalle de órdenes.
+- Ideal para escalar en volumen de datos.
+</details>
 
-## Laravel Sponsors
+<details>
+<summary>Redis</summary>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Sistema de cache en memoria para **listados y estados de órdenes**.
+- Mejora la velocidad de respuesta de la API.
+- Se utiliza para cachear consultas frecuentes y se invalida cuando cambia el estado de una orden.
+- Permite integración fácil con Jobs y colas.
+</details>
 
-### Premium Partners
+<details>
+<summary>Jobs y colas</summary>
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Manejan el **procesamiento asíncrono de órdenes**.
+- Permiten separar la recepción de las órdenes de su procesamiento pesado.
+- Garantizan que la API responda rápidamente al usuario mientras las tareas se ejecutan en segundo plano.
+- Se pueden configurar distintos “workers” y prioridades.
+</details>
 
-## Contributing
+<details>
+<summary>HTTP REST</summary>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Comunicación con el **servicio externo NestJS** mediante peticiones HTTP.
+- Uso de endpoints bien definidos para enviar órdenes y consultar estados.
+- Facilita integración con otros sistemas o microservicios.
+- Basado en estándares REST para mantener consistencia y escalabilidad.
+</details>
