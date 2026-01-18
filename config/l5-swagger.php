@@ -24,6 +24,10 @@ return [
                  * Edit to include full URL in assets
                  */
                 'use_absolute_path' => env('L5_SWAGGER_USE_ABSOLUTE_PATH', true),
+                /*
+                 * Set to null to use the default asset path
+                 */
+                'proxy' => false,
 
                 /*
                  * File name of the generated json documentation file
