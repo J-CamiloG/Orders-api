@@ -104,7 +104,7 @@ Para garantizar el correcto funcionamiento de la arquitectura distribuida, el en
 El sistema está diseñado bajo una arquitectura distribuida que separa la gestión de la API del procesamiento intensivo de datos, asegurando alta disponibilidad y escalabilidad.
 
 ### Diagrama de Flujo y Arquitectura
-![Diagrama de Arquitectura](docs/images/diagramas/Diagrama.png)
+![Diagrama de Arquitectura](docs/image/diagramas/Diagrama.png)
 
 ---
 
