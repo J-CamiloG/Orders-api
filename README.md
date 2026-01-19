@@ -154,7 +154,7 @@ Servicio especializado en el procesamiento de órdenes externas:
 El siguiente flujo detalla el ciclo de vida de una orden, desde su importación hasta su consulta final, destacando la interacción asíncrona entre servicios.
 
 ### Secuencia de Procesamiento
-![Diagrama de flujo de órdenes](docs/images/diagramas/diagramaArquitectura.png)
+![Diagrama de flujo de órdenes](docs/image/diagramas/Diagrama.png)
 
 ---
 
