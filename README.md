@@ -104,7 +104,8 @@ Para garantizar el correcto funcionamiento de la arquitectura distribuida, el en
 El sistema está diseñado bajo una arquitectura distribuida que separa la gestión de la API del procesamiento intensivo de datos, asegurando alta disponibilidad y escalabilidad.
 
 ### Diagrama de Flujo y Arquitectura
-![Diagrama de Arquitectura](docs/image/diagramas/Diagrama.png)
+
+![Diagrama de Arquitectura](docs/image/diagramas/DiaramaFlujo.png)
 
 ---
 
@@ -154,7 +155,7 @@ Servicio especializado en el procesamiento de órdenes externas:
 El siguiente flujo detalla el ciclo de vida de una orden, desde su importación hasta su consulta final, destacando la interacción asíncrona entre servicios.
 
 ### Secuencia de Procesamiento
-![Diagrama de flujo de órdenes](docs/image/diagramas/Diagrama.png)
+![Diagrama de flujo de órdenes](docs/image/diagramas/DiagramaFlujoOrdenes.png)
 
 ---
 
@@ -192,7 +193,7 @@ El siguiente flujo detalla el ciclo de vida de una orden, desde su importación 
 El sistema utiliza dos esquemas de base de datos independientes para garantizar el desacoplamiento entre el servicio de gestión de API y el procesador externo.
 
 ### Modelo de Entidad-Relación
-![Diagrama de base de datos](docs/images/diagramas/diagrama-bd.png)
+![Diagrama de base de datos](docs/image/diagramas/Diagrama.png)
 
 ---
 
